@@ -45,7 +45,7 @@ jobs:
     needs: Publish
     steps:
       - name: Enviar correo
-        uses: dawidd6/action-send-mail@v3
+        uses: dawidd6/action-send-mail@v3.12.0
         with:
           server_address: smtp.gmail.com
           server_port: 587
@@ -53,5 +53,5 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           subject: "Artefacto de andguicam publicado"
           body: "El artefacto generado por andguicam se ha publicado correctamente."
-          to: irm@us.es
+          to: ${{secrets.DESTINATARIO}}
           from: andguicam
