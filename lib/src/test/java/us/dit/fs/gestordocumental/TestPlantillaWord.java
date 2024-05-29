@@ -50,6 +50,20 @@ class TestPlantillaWord {
 	        assertEquals(wordDocument.convertTextFileToString("parrafo.txt"), paragraphs.get(2).getText());
 	       
 	    }
+		/**
+		 * Verifica el tamaño del subtitulo, que debe ser 16
+		 * @throws Exception
+		 */
+		@Test
+		public void checkSubtitlesFontSize() throws Exception{
+			Path msWordPath = Paths.get("Quijote.docx");
+			logger.info("path ",msWordPath);
+			XWPFDocument document = new XWPFDocument(Files.newInputStream(msWordPath));
+			List<XWPFParagraph> paragraphs = document.getParagraphs();
+			document.close();
+			assertEquals(16, paragraphs.get(1).getRuns().get(0).getFontSize());
+
+		}
 	}
 
 

@@ -62,7 +62,7 @@ public class PlantillaWord {
     }    
     /**
      * Método para añadir un subtítulo con un formato determinado
-     * @param ficheroParrafo Nombre del fichero de texto que contiene el texto del subtítulo
+     * @param ficheroSubtitulo Nombre del fichero de texto que contiene el texto del subtítulo
      */
     public void addSubtitle(String ficheroSubtitulo) {
     	 String texto = convertTextFileToString(ficheroSubtitulo);
@@ -72,7 +72,7 @@ public class PlantillaWord {
          subTitleRun.setText(texto);
          subTitleRun.setColor("00CC44");
          subTitleRun.setFontFamily("Courier");         
-         subTitleRun.setFontSize(12);
+         subTitleRun.setFontSize(16);
          subTitleRun.setTextPosition(20);
          subTitleRun.setUnderline(UnderlinePatterns.DOT_DOT_DASH);
     }    
