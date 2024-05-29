@@ -53,5 +53,5 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           subject: "Artefacto de andguicam publicado"
           body: "El artefacto generado por andguicam se ha publicado correctamente."
-          to: ${{ secrets.DESTINATARIO }}
+          to: irm@us.es
           from: andguicam
